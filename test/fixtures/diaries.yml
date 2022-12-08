@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: diaries
+#
+#  id          :bigint           not null, primary key
+#  deadline    :datetime
+#  description :string
+#  image       :string
+#  name        :string
+#  price       :decimal(, )
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :bigint
+#
+# Indexes
+#
+#  index_diaries_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
+#
+
+one:
+  image: MyString
+  name: MyString
+  description: MyString
+  price: 9.99
+  deadline: 2022-11-25 13:53:11
+
+two:
+  image: MyString
+  name: MyString
+  description: MyString
+  price: 9.99
+  deadline: 2022-11-25 13:53:11

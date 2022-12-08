@@ -1,0 +1,33 @@
+  <style>
+
+
+
+table{
+    width:100%;
+}
+table tr {display:inline}
+
+</style>
+
+
+
+
+
+
+<h1>Winners of the Auction</h1>
+
+<table class="table" >
+  <tbody id="myTable">
+  <% @diaries.each do |d|%>
+  <% if d.deadline < @time && d.creator.accounttype != "admin" %>
+  <div class="card" style="width: 18rem;Height: 25rem">
+    <%= image_tag(d.figure_image, :size => "285x150")%> 
+    <p class = "card-text">NAME: <%= d.name %> </p>
+    <p class = "card-text">PRICE: <%= d.price %></p>
+    <p class = "card-text">PURCHASED ON: <%= d.updated_at.to_datetime %> </p>
+    <p class = "card-text">WINNER: <%= d.creator.email %> </p>
+</div>
+<% end %>
+<% end %>
+</td>
+

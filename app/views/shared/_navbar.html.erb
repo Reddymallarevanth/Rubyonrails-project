@@ -20,18 +20,51 @@
           <%= link_to 'about', about_path,
                       class: "nav-link #{active_class(about_path)} btn btn-link" %>
         </li>
+        <li class="nav-item">
+          <%= link_to 'Diaries', diaries_path,
+                      class: "nav-link #{active_class(diaries_path)} btn btn-link" %>
+        </li>
+
       </ul>
       
       <ul class="navbar-nav">
         <% if user_signed_in? %>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            My Account
+          </a>
+          <ul class="dropdown-menu">
           <li class="nav-item">
-            <%= link_to "Hi, #{current_user.email}", edit_user_registration_path,
-                        class: "nav-link #{active_class(edit_user_registration_path)} btn btn-link" %>
-          </li>
+          <%= link_to "Hi, #{current_user.email}", edit_user_registration_path,
+                      class: "nav-link #{active_class(edit_user_registration_path)} btn btn-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to "My Uploads", uploads_path,
+        class: "nav-link #{active_class(edit_user_registration_path)} btn btn-link" %>
+          </ul>
+        </li>
+
+        <% if current_user.accounttype == "admin" %>
+        <li class="nav-item">
+          <%= link_to 'Customers',customers_path,
+                    class: "nav-link #{active_class(customers_path)} btn btn-link" %>
+        </li>
+        <% end %>
+
+        <li class="nav-item">
+          <%= link_to 'Winners', winners_path,
+                    class: "nav-link #{active_class(winners_path)} btn btn-link" %>
+        </li>
+          <li class="nav-item">
+          <%= link_to 'Upload', new_diary_path,
+                    class: "nav-link #{active_class(new_diary_path)} btn btn-link" %>
+        </li>
           <li class="nav-item">
             <%= button_to 'Sign Out', destroy_user_session_path,
                           method: :delete, data: { turbo: false }, class: 'nav-link btn btn-link' %>
           </li>
+         
         <% else %>
           <li class="nav-item">
             <%= link_to 'Sign In', new_user_session_path,

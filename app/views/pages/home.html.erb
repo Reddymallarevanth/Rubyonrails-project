@@ -1,1 +1,82 @@
+
+
 <h1>Welcome to home page</h1>
+<div class="parallax-banner-new" data-parallax="scroll" data-position="top" data-bleed="10">
+      <div class="container">
+        <div class="row vertical-alignment">
+          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+            <div data-aos="fade-in" data-aos-duration="2000" class="aos-init">
+              <p class="banner-heading-1">
+			  Welcome to home page - welcome to unknown to known
+			  a place where you can know people with no filters "THE REAL KIND".
+              </p>  
+              <p class="banner-tagline-new">
+			  Also you've just found the easiest online auction platform to buy your 
+			  Favorite Diary to have your little Dear Diary moments.
+              </p>
+            </div>
+            <div class="start-auction-btn-new" style="display:none">
+              <a href="#home" style="text-decoration: none">
+                <button>Build An Auction</button>
+              </a>
+              <button type="button" data-toggle="modal" data-target="#myModal">
+                How it Works
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 annie-img">
+            <%= image_tag 'auction.jpg' %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+<style>
+	.parallax-banner-new {
+    	width: 100%;
+    	background-color:#d4eaff;
+    	padding: 90px 0 90px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+	}
+    .container {
+    	width: 970px;
+	}
+    .vertical-alignment {
+    	display: flex;
+    	align-items: center;
+	}
+    .banner-heading-1 {
+    	margin-bottom: 0;
+    	font-size: 36px;
+    	color: #0e559f;
+    	line-height: 48px;
+    	font-family: sans-serif;
+    	font-weight: bold;
+	}
+    .banner-tagline-new {
+    	color: #0e559f;
+    	font-size: 14px;
+    	margin-bottom: 0;
+    	padding-top: 20px;
+    	font-weight: 600;
+	}
+    .start-auction-btn-new button {
+    	width: auto;
+    	text-align: center;
+    	line-height: 38px;
+    	color: #fff;
+    	border: none;
+    	border-radius: 5px;
+    	background: #f05439;
+    	margin-top: 20px;
+    	font-weight: bold;
+    	padding: 0px 25px;
+    	float: left;
+    	border: 3px solid #f05439;
+	} 
+</style>

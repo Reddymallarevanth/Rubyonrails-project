@@ -1,0 +1,9 @@
+<%= bootstrap_form_with model: @diary, local: true do |f| %>
+    
+    <%= f.text_field :name %>
+    <%= f.file_field :figure_image %>
+    <%= f.text_area :description %>
+    <%= f.number_field :price %>
+    <%= f.datetime_select :deadline %>
+      <%= f.submit %>
+  <% end %>

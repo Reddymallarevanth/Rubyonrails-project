@@ -1,0 +1,40 @@
+<style>
+
+
+
+table{
+    width:100%;
+}
+table tr {display:inline}
+
+</style>
+
+
+
+
+
+<%= form_for "",url: diaries_path, role: "search", method: :get do %>
+    <%= text_field_tag :search, @search_term, placeholder: "Search...."%>
+    <button class="button" type="submit">Search</button>
+    <%end%>
+
+    <%= link_to "Advanced Search", new_search_path %>
+<h1>Diaries for Auction</h1>
+
+<table class="table" >
+  <tbody id="myTable">
+  <% @diaries.each do |d|%>
+  <tr>
+  <td>
+  <div class="card" style="width: 18rem;Height: 20rem">
+    <%= link_to image_tag(d.figure_image, :size => "285x150"),diary_path(d)%> 
+<p class = "card-text">NAME: <%= d.name %> </p>
+
+ <% if user_signed_in? %>
+ <% if current_user.accounttype == "admin" %>
+ <p class = "card-text"> <%= link_to "Edit", edit_diary_path(d), class: "btn btn-primary"%> </p>
+ <%= button_to "Delete",diary_path(d),method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+ <% end %>
+ <% end %>
+<%end%>
+</div>

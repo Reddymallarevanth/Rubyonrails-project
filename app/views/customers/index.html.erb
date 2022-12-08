@@ -1,0 +1,26 @@
+<h1>Customers List</h1>
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Customer Mail</th>
+      <th> Phone Number</th> 
+      <th>age</th>
+      <th>profession</th>
+      <th>gender</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.email %></td>
+        <td><%= customer.number %></td>
+        <td><%= customer.age %></td>
+        <td><%= customer.profession %></td>
+        <td><%= customer.gender %></td>
+        <td><%= button_to "Delete", customer_path(customer), method: :delete, data: { turbo: false }, class: "btn btn-sm btn-danger" %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

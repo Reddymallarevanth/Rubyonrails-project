@@ -1,0 +1,66 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  
+
+  <div class="field">
+    <%= f.label :PhoneNumber %><br />
+    <%= f.text_field :number, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+
+  Gender<br />
+  <%= f.label :Male %>
+    <%= f.radio_button :gender, 'Male' %><br/>
+    <%= f.label :Female %>
+    <%= f.radio_button :gender, 'Female' %><br />
+    <%= f.label :Other %>
+    <%= f.radio_button :gender, 'Other' %><br />
+  <br>
+  <div class="field">
+    <%= f.label :Age %><br />
+    <%= f.text_field :age, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :Profession %><br />
+    <%= f.text_field :profession, autofocus: true %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <%= f.radio_button :accounttype, 'customer' %> 
+  <%= f.label :accounttype, 'customer', :value => 'customer' %>
+
+   <%= f.radio_button :accounttype, 'admin' %> 
+  <%= f.label :accounttype, 'admin', :value => 'admin' %>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -3,8 +3,14 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
+#  accounttype            :string
+#  address                :string
+#  age                    :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
+#  gender                 :string
+#  number                 :string
+#  profession             :string
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
