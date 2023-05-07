@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home', as: 'home'
   get 'about', to: 'pages#about', as: 'about'
   get 'diaries', to: 'diaries#index', as: 'diaries'
+  resources :searches
   get 'uploads', to: 'diaries#upload', as: 'uploads'
   get 'customers', to: 'customers#index', as: 'customers'
   get 'customers/:id', to: 'customers#index', as: 'customer'

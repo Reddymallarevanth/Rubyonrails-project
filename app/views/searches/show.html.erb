@@ -1,0 +1,19 @@
+<h1>Search Results</h1>
+<p><%= link_to "Back", new_search_path %></p>
+
+<% if @search.search_diary.empty? %>
+    <p>No Diaries were found.</p>
+<% else %>
+    <table>
+
+
+        <tbody>
+            <% @search.search_diary.each do |c| %>
+            <tr>
+                <td><%= c.email %></td>
+                <%= link_to image_tag(c.figure_image, width:"10%"),diary_path(c)%> 
+            </tr>
+            <% end %>
+        </tbody>
+</table>
+<% end %>

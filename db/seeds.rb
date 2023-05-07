@@ -72,6 +72,7 @@ diary2 = Diary.create!(
     description: "it is a good diary ",
     deadline: DateTime.now+0.003,
     price: 100,
+
     creator: user1
     )
     diary2.figure_image.attach(io: File.open(Rails.root.join('app/assets/images/exp1.jpg')), filename: 'exp1.jpg')
@@ -80,6 +81,7 @@ diary3 = Diary.create!(
     description: "it is a good diary ",
     deadline: DateTime.now+0.003,
     price: 100,
+
     creator: user1
     )
     diary3.figure_image.attach(io: File.open(Rails.root.join('app/assets/images/exp1.jpg')), filename: 'exp1.jpg')
@@ -89,6 +91,7 @@ diary3 = Diary.create!(
         description: "it is a good diary ",
         deadline: DateTime.now+0.003,
         price: 100,
+
         creator: user1
         )
         diary4.figure_image.attach(io: File.open(Rails.root.join('app/assets/images/exp1.jpg')), filename: 'exp1.jpg')
@@ -98,6 +101,7 @@ diary3 = Diary.create!(
         description: "it is a good diary ",
         deadline: DateTime.now+0.003,
         price: 100,
+
         creator: user1
         )
         diary5.figure_image.attach(io: File.open(Rails.root.join('app/assets/images/exp1.jpg')), filename: 'exp1.jpg')
@@ -106,6 +110,7 @@ diary3 = Diary.create!(
         description: "it is a good diary ",
         deadline: DateTime.now+0.003,
         price: 100,
+        
         creator: user1
         )
         diary6.figure_image.attach(io: File.open(Rails.root.join('app/assets/images/exp1.jpg')), filename: 'exp1.jpg')

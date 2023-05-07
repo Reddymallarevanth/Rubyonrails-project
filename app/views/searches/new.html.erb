@@ -1,0 +1,16 @@
+<h1>Advanced Search</h1>
+
+<%= form_with model: @search do |f| %>
+    <%= f.label :age %>
+    <%= f.select :age, options_for_select(@age), include_blank: true %><br>
+
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select(@gender), include_blank: true %><br><br>
+
+    <%= f.label :profession %>
+    <%= f.select :profession, options_for_select(@profession), include_blank: true %><br>
+
+    <%= f.submit "Search" %>
+<% end %>
+
+<p><%= link_to "Back", '/home' %></p>

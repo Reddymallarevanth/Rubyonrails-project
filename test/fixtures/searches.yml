@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: searches
+#
+#  id         :bigint           not null, primary key
+#  age        :string
+#  gender     :string
+#  profession :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  age: MyString
+  gender: MyString
+  profession: MyString
+
+two:
+  age: MyString
+  gender: MyString
+  profession: MyString
